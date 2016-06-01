@@ -129,14 +129,13 @@ public class AutoZoomInImageView extends ImageView{
 	}
 
     /**
-     * 开始放大动画
      * start zooming in
-     * @param scaleDelta        放大的增大倍数，如果是0.2，那么最后大小放大至1.2倍。
-     *                          the scale that the image will add to original scale
-     * @param durationMillis    放大效果的持续时间，单位毫秒。
-     *                          the duration of zoomin animation, in millisecond.
-     * @param delayMillis       开始放大效果的延迟时间，单位毫秒。delayed毫秒后开始放大动画效果。
-     *                          the delayed time of starting zoomin animation, in millisecond.
+     * @param scaleDelta
+     *          the scale that the image will add to original scale
+     * @param durationMillis
+     *          the duration of zoomin animation, in millisecond.
+     * @param delayMillis
+     *          the delayed time of starting zoomin animation, in millisecond.
      */
 	public void startZoomInByScaleDeltaAndDuration(final float scaleDelta, final long durationMillis, long delayMillis){
 		if(scaleDelta < 0){
@@ -158,7 +157,6 @@ public class AutoZoomInImageView extends ImageView{
 	}
 
     /**
-     * 放大的增大倍数，如果是0.2，那么最后大小放大至1.2倍。
      * the scale that the image will add to original scale
      * @param scaleDelta
      * @return
@@ -169,7 +167,6 @@ public class AutoZoomInImageView extends ImageView{
     }
 
     /**
-     * 放大效果的持续时间，单位毫秒。
      * the duration of zoomin animation, in millisecond.
      * @param durationMillis
      * @return
@@ -180,7 +177,6 @@ public class AutoZoomInImageView extends ImageView{
     }
 
     /**
-     * 动画结束的回调
      * callback when zoomin animation finished
      * @param onZoomListener
      * @return
@@ -191,10 +187,9 @@ public class AutoZoomInImageView extends ImageView{
     }
 
     /**
-     * 开始放大效果
      * start animation of zoomin
-     * @param delayMillis       开始放大效果的延迟时间，单位毫秒。delayed毫秒后开始放大动画效果
-     *                          the delayed time of starting zoomin animation, in millisecond.
+     * @param delayMillis
+     *          the delayed time of starting zoomin animation, in millisecond.
      */
     public void start(long delayMillis){
         postDelayed(new Runnable() {
@@ -235,7 +230,6 @@ public class AutoZoomInImageView extends ImageView{
                                         float imageW, float imageH,
                                         float oriScaleX, float oriScaleY,
                                         float scaleDelta){
-        //根据四个参数：图片的宽高、控件的宽高，动态的计算出输出的矩阵（float数组）的值
         outValues[0] = oriScaleX * (1 + scaleDelta);
         outValues[4] = oriScaleY * (1 + scaleDelta);
 		float offsetwidth = (drawW * outValues[0] - imageW)/2;
@@ -247,9 +241,9 @@ public class AutoZoomInImageView extends ImageView{
     private OnZoomListener mOnZoomListener;
     public interface OnZoomListener{
         /**
-         * 动画更新时执行的回调
-         * @param view      返回此AutoZoomInImageView
-         * @param progress  返回动画进行过程，范围是[0,1]
+         * callback when zoom in animation is updating
+         * @param view      AutoZoomInImageView
+         * @param progress  return the progress of animation, scope is [0,1]
          */
         void onUpdate(View view, float progress);
         void onEnd(View view);
