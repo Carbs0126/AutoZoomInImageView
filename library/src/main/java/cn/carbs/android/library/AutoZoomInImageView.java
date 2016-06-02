@@ -234,7 +234,7 @@ public class AutoZoomInImageView extends ImageView{
         outValues[4] = oriScaleY * (1 + scaleDelta);
 		float offsetwidth = (drawW * outValues[0] - imageW)/2;
 		outValues[2] = - offsetwidth;
-		float offsetHeight = (drawH * outValues[0] - imageH)/2;
+		float offsetHeight = (drawH * outValues[4] - imageH)/2;
 		outValues[5] = - offsetHeight;
 	}
 
