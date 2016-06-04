@@ -23,7 +23,7 @@ compile 'cn.carbs.android:AutoZoomInImageView:1.0.0'
 ```
 
 ##使用方法：
-1. layout文件中添加此view
+1.layout文件中添加此view
 ```
 <cn.carbs.android.library.AutoZoomInImageView
         android:id="@+id/auto_zoomin_image_view"
@@ -32,7 +32,7 @@ compile 'cn.carbs.android:AutoZoomInImageView:1.0.0'
         android:src="@drawable/your_pic" />
 ```
 
-2. 在onCreate(Bundle bundle)函数中，添加如下代码：
+2.在onCreate(Bundle bundle)函数中，添加如下代码：
 ```
 auto_zoomin_image_view.post(new Runnable() {
 
