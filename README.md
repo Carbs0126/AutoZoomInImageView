@@ -1,4 +1,5 @@
 # AutoZoomInImageView
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AutoZoomInImageView-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3819)
 
 #前言：
 很多app的splash动画是这样的：一张静态图片居中显示并充满屏幕，同时不断放大图片中间部分，形成一种图片不断向中间放大的动画效果。AutoZoomInImageView继承自ImageView并实现了这种动画效果。
