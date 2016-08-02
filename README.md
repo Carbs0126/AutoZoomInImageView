@@ -20,7 +20,7 @@
 
 ##添加至工程
 ```
-compile 'cn.carbs.android:AutoZoomInImageView:1.0.0'
+compile 'cn.carbs.android:AutoZoomInImageView:1.0.1'
 ```
 
 ##使用方法：
@@ -68,6 +68,8 @@ auto_zoomin_image_view.post(new Runnable() {
 
 ```
 
+##注意
+minSdkVersion 11
 
 ## License
 
