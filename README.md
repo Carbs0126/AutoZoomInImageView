@@ -26,7 +26,7 @@ compile 'cn.carbs.android:AutoZoomInImageView:1.0.1'
 ##使用方法：
 1.layout文件中添加此view
 ```
-<cn.carbs.android.library.AutoZoomInImageView
+<cn.carbs.android.autozoominimageview.library.AutoZoomInImageView
         android:id="@+id/auto_zoomin_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
