@@ -1,29 +1,29 @@
 # AutoZoomInImageView
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AutoZoomInImageView-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3819)
 
-#前言：
+# 前言：
 很多app的splash动画是这样的：一张静态图片居中显示并充满屏幕，同时不断放大图片中间部分，形成一种图片不断向中间放大的动画效果。AutoZoomInImageView继承自ImageView并实现了这种动画效果。
 
-##截图：
+## 截图：
 <center>
 ![you can check the preview.gif](https://github.com/Carbs0126/Screenshot/blob/master/AutoZoomInImageView.gif)
 </center>
 
-##功能：
+## 功能：
 1. 图像居中显示（图像覆盖整个AutoZoomInImageView），并可以使其进行中心放大显示的动画。
 2. 可以设置动画放大的时长；
 3. 可以设置动画放大的比例，设置其动画效果达到的最终尺寸是其初始化尺寸的增大倍数；
 
-##原理：
+## 原理：
 1. 调整图片，使图片位于屏幕的正中间。由于android手机屏幕尺寸多种多样，而图片的大小也不甚相同，为了灵活的使用此效果，需要将任意尺寸比例的图片显示在任意尺寸比例的手机屏幕的正中间，同时不使图片扭曲变形。
 2. 更改float[]的值，然后更新Matrix并应用到ImageView中，从而达到图片zoomin的效果
 
-##添加至工程
+## 添加至工程
 ```
 compile 'cn.carbs.android:AutoZoomInImageView:1.0.1'
 ```
 
-##使用方法：
+## 使用方法：
 1.layout文件中添加此view
 ```
 <cn.carbs.android.autozoominimageview.library.AutoZoomInImageView
@@ -68,7 +68,7 @@ auto_zoomin_image_view.post(new Runnable() {
 
 ```
 
-##注意
+## 注意
 minSdkVersion 11
 
 ## License
